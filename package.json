@@ -1,8 +1,8 @@
 {
   "name": "evaljson",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Eval embedded value in json. Useful to define message resource object.",
-  "main": "index.js",
+  "main": "evaljson.js",
   "scripts": {
     "test": "nodeunit evaljson_test.js",
     "cover": "istanbul cover nodeunit evaljson_test.js --dir coverage",
