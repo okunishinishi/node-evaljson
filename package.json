@@ -1,0 +1,41 @@
+{
+  "name": "evaljson",
+  "version": "1.0.1",
+  "description": "Eval embedded value in json. Useful to define message resource object.",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodeunit evaljson_test.js",
+    "cover": "istanbul cover nodeunit evaljson_test.js --dir coverage",
+    "report": "codeclimate-test-reporter  < coverage/lcov.info",
+    "versionup": "versionup",
+    "taggit": "taggit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okunishinishi/node-evaljson.git"
+  },
+  "keyword": [
+    "json",
+    "eval",
+    "embed"
+  ],
+  "author": "Taka Okunishi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/okunishinishi/node-evaljson/issues"
+  },
+  "homepage": "https://github.com/okunishinishi/node-evaljson#readme",
+  "devDependencies": {
+    "codeclimate-test-reporter": "0.1.0",
+    "coz": "^1.0.25",
+    "istanbul": "^0.3.17",
+    "nodeunit": "^0.9.1",
+    "taggit": "^1.0.3",
+    "versionup": "^1.0.7"
+  },
+  "dependencies": {
+    "argx": "^1.0.5",
+    "extend": "^3.0.0",
+    "objnest": "^1.0.3"
+  }
+}
