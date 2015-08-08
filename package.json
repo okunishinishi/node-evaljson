@@ -1,13 +1,13 @@
 {
   "name": "evaljson",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Eval embedded value in json. Useful to define message resource object.",
   "main": "evaljson.js",
   "scripts": {
-    "build": "./ci/bin/build.js",
-    "test": "./ci/bin/test.js",
-    "cover": "./ci/bin/cover.js",
-    "report": "./ci/bin/report.js"
+    "build": "./ci/build.js",
+    "test": "./ci/test.js",
+    "cover": "./ci/cover.js",
+    "report": "./ci/report.js"
   },
   "repository": {
     "type": "git",
