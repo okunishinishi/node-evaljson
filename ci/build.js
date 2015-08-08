@@ -6,19 +6,15 @@
 
 "use strict";
 
-var path = require('path'),
-    apeTasking = require('ape-tasking'),
+process.chdir(__dirname + '/..');
+
+var apeTasking = require('ape-tasking'),
     coz = require('coz');
 
-var basedir = path.resolve(__dirname, '..');
-
-process.chdir(basedir);
-
 apeTasking.runTasks('build', [
-    function (callback) {
+    function renderBud(callback) {
         coz.render([
             '.*.bud'
         ], callback);
     }
 ], true);
-

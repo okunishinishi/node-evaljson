@@ -1,6 +1,6 @@
 {
   "name": "evaljson",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Eval embedded value in json. Useful to define message resource object.",
   "main": "evaljson.js",
   "scripts": {
@@ -33,7 +33,8 @@
     "ape-reporting": "^1.0.3",
     "ape-tasking": "^1.0.2",
     "ape-testing": "^1.1.3",
-    "coz": "^1.4.2"
+    "ape-tmpl": "^1.0.1",
+    "coz": "^1.5.0"
   },
   "dependencies": {
     "argx": "^1.1.5",
