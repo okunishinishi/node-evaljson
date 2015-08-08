@@ -1,6 +1,6 @@
 {
   "name": "evaljson",
-  "version": "1.1.4",
+  "version": "1.1.6",
   "description": "Eval embedded value in json. Useful to define message resource object.",
   "main": "evaljson.js",
   "scripts": {
@@ -28,17 +28,18 @@
   },
   "homepage": "https://github.com/okunishinishi/node-evaljson#readme",
   "devDependencies": {
-    "ape-covering": "^1.0.2",
-    "ape-releasing": "^1.0.9",
-    "ape-reporting": "^1.0.3",
-    "ape-tasking": "^1.0.2",
-    "ape-testing": "^1.1.3",
-    "ape-tmpl": "^1.0.1",
+    "ape-updating": "^1.0.1",
+    "ape-covering": "^1.0.8",
+    "ape-releasing": "^1.0.14",
+    "ape-reporting": "^1.0.8",
+    "ape-tasking": "^1.0.6",
+    "ape-testing": "^1.1.6",
+    "ape-tmpl": "^1.0.3",
     "coz": "^1.5.0"
   },
   "dependencies": {
     "argx": "^1.1.5",
     "extend": "^3.0.0",
-    "objnest": "^1.0.3"
+    "objnest": "^1.1.0"
   }
 }
