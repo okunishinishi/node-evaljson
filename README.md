@@ -33,15 +33,24 @@ Eval embedded value in json. Useful to define message resource object.
 
 
 
+
 <!-- Sections Start -->
 <a name="sections"></a>
 
+<!-- Section from "docs/readme/01.Installation.md.hbs" Start -->
+
+<a name="section-docs-readme-01-installation-md"></a>
 Installation
 -----
 
 ```bash
 npm install evaljson --save
 ```
+<!-- Section from "docs/readme/01.Installation.md.hbs" End -->
+
+<!-- Section from "docs/readme/02.Usage.md.hbs" Start -->
+
+<a name="section-docs-readme-02-usage-md"></a>
 Usage
 -----
 
@@ -61,6 +70,11 @@ var locale = evaljson({
 console.log(locale.titles['WELCOME_TITLE']); //-> Welcome to My Awesome App!
 ````
 
+<!-- Section from "docs/readme/02.Usage.md.hbs" End -->
+
+<!-- Section from "docs/readme/03.API.md.hbs" Start -->
+
+<a name="section-docs-readme-03-a-p-i-md"></a>
 API
 ---
 
@@ -69,6 +83,8 @@ API
 | evaljson(src) | Eval src, with self values as context. |
 | evaljson(src, context) | Eval with self values with context. |
 
+
+<!-- Section from "docs/readme/03.API.md.hbs" End -->
 
 
 <!-- Sections Start -->
