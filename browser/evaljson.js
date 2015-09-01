@@ -73,7 +73,7 @@ module.exports = evaljson;
 /**
  * Eval embedded value in json. Useful to define message resource object.
  * @module evaljson
- * @version 1.1.7
+ * @version 1.2.0
  */
 
 "use strict";
