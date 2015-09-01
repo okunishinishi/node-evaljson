@@ -5,7 +5,7 @@
 
 "use strict";
 
-var evaljson = require('./evaljson');
+var evaljson = require('../lib/evaljson');
 
 exports['Evaluate json files.'] = function (test) {
     var data = evaljson({
