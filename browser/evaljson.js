@@ -14,14 +14,14 @@ window.argx = require("../lib/index.js");
 
 var extend = require('extend');
 
-/** @lends embed */
-function embed(src, values) {
+/** @lends embedValues */
+function embedValues(src, values) {
     var dest = extend({}, src);
     Object.keys(dest).forEach(function (key) {
         var value = dest[key];
         switch (typeof(value)) {
             case 'object':
-                dest[key] = _embed(value, values);
+                dest[key] = embedValues(value, values);
                 break;
             case 'string':
                 dest[key] = value.replace(/(#\{)(.*?)(\})/g, function ($0, $1, $2) {
@@ -40,7 +40,7 @@ function embed(src, values) {
     return dest;
 }
 
-module.exports = embed;
+module.exports = embedValues;
 
 },{"extend":11}],3:[function(require,module,exports){
 /**
@@ -55,6 +55,7 @@ module.exports = embed;
 
 var objnest = require('objnest'),
     argx = require('argx'),
+    extend = require('extend'),
     embedValues = require('./embed_values');
 
 
@@ -69,11 +70,11 @@ function evaljson(src, data) {
 }
 
 module.exports = evaljson;
-},{"./embed_values":2,"argx":6,"objnest":14}],4:[function(require,module,exports){
+},{"./embed_values":2,"argx":6,"extend":11,"objnest":14}],4:[function(require,module,exports){
 /**
  * Eval embedded value in json. Useful to define message resource object.
  * @module evaljson
- * @version 1.2.0
+ * @version 1.2.1
  */
 
 "use strict";
