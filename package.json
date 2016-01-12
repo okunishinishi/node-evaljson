@@ -1,18 +1,12 @@
 {
   "name": "evaljson",
-  "version": "1.2.2",
+  "version": "2.0.0",
   "description": "Eval embedded value in json. Useful to define message resource object.",
   "main": "lib",
   "scripts": {
-    "build": "./ci/build.js",
-    "test": "./ci/test.js",
-    "cover": "./ci/cover.js",
-    "report": "./ci/report.js"
+    "test": "./ci/test.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/okunishinishi/node-evaljson.git"
-  },
+  "repository": "okunishinishi/node-evaljson",
   "keyword": [
     "json",
     "eval",
@@ -27,21 +21,23 @@
     "url": "https://github.com/okunishinishi/node-evaljson/issues"
   },
   "homepage": "https://github.com/okunishinishi/node-evaljson#readme",
-  "devDependencies": {
-    "ape-compiling": "^1.0.3",
-    "ape-covering": "^1.0.8",
-    "ape-releasing": "^1.0.14",
-    "ape-reporting": "^1.0.8",
-    "ape-tasking": "^1.0.7",
-    "ape-testing": "^1.3.2",
-    "ape-tmpl": "^1.1.0",
-    "ape-updating": "^1.0.1",
-    "coz": "^3.0.13",
-    "coz-tmpl": "^1.0.4"
-  },
   "dependencies": {
-    "argx": "^1.2.4",
+    "argx": "^1.3.1",
     "extend": "^3.0.0",
-    "objnest": "^1.2.0"
+    "objnest": "^2.0.3"
+  },
+  "devDependencies": {
+    "ape-compiling": "^3.3.0",
+    "ape-covering": "^2.0.2",
+    "ape-releasing": "^2.0.1",
+    "ape-reporting": "^2.0.3",
+    "ape-tasking": "^2.0.2",
+    "ape-testing": "^2.0.0",
+    "ape-tmpl": "^2.0.7",
+    "ape-updating": "^2.0.3",
+    "coz": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=4.0.0"
   }
 }

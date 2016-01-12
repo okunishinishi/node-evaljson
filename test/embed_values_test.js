@@ -1,20 +1,25 @@
 /**
  * Test case for embedValues.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+"use strict";
 
-var embedValues = require('../lib/embed_values.js');
+const embedValues = require('../lib/embed_values.js'),
+    assert = require('assert');
 
-exports.setUp = function(done) {
-    done();
-};
+describe('embed-values', () => {
 
-exports.tearDown = function(done) {
-    done();
-};
+    before((done) => {
+        done();
+    });
 
-exports['Embed values'] = function(test){
+    after((done) => {
+        done();
+    });
 
-    test.done();
-};
+
+    it('Embed values', (done) => {
+        done();
+    });
+});
 

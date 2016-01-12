@@ -1,34 +1,37 @@
 /**
  * Test for evajson.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
 
 "use strict";
 
-var evaljson = require('../lib/evaljson');
+const evaljson = require('../lib/evaljson'),
+    assert = require('assert');
 
-exports['Evaluate json files.'] = function (test) {
-    var data = evaljson({
-        foo: {
-            'bar': 'quz=#{foo.bar2}',
-            'bar2': "This is bar 2."
-        }
-    });
-    test.deepEqual(data, {
-        foo: {
-            bar: 'quz=This is bar 2.', bar2: 'This is bar 2.'
-        }
-    });
+describe('evaljson', () => {
+    it('Evaluate json files.', (done) => {
+        let data = evaljson({
+            foo: {
+                'bar': 'quz=#{foo.bar2}',
+                'bar2': "This is bar 2."
+            }
+        });
+        assert.deepEqual(data, {
+            foo: {
+                bar: 'quz=This is bar 2.', bar2: 'This is bar 2.'
+            }
+        });
 
-    var locale = evaljson({
-        keys: {
-            'NAME': 'My Awesome App'
-        },
-        titles: {
-            'WELCOME_TITLE': "Welcome to #{keys.NAME}!"
-        }
-    });
+        let locale = evaljson({
+            keys: {
+                'NAME': 'My Awesome App'
+            },
+            titles: {
+                'WELCOME_TITLE': "Welcome to #{keys.NAME}!"
+            }
+        });
 
-    test.equal(locale.titles['WELCOME_TITLE'], "Welcome to My Awesome App!");
-    test.done();
-};
+        assert.equal(locale.titles['WELCOME_TITLE'], "Welcome to My Awesome App!");
+        done();
+    });
+});
