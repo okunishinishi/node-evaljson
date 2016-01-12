@@ -1,6 +1,8 @@
-var evaljson = require('evaljson');
+"use strict";
 
-var locale = evaljson({
+const evaljson = require('evaljson');
+
+let locale = evaljson({
     keys: {
         NAME: "My Awesome App"
     },

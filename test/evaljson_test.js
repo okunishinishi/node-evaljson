@@ -21,7 +21,10 @@ describe('evaljson', () => {
                 bar: 'quz=This is bar 2.', bar2: 'This is bar 2.'
             }
         });
+        done();
+    });
 
+    it('Local data.', (done) => {
         let locale = evaljson({
             keys: {
                 'NAME': 'My Awesome App'
@@ -32,6 +35,19 @@ describe('evaljson', () => {
         });
 
         assert.equal(locale.titles['WELCOME_TITLE'], "Welcome to My Awesome App!");
+        done();
+    });
+
+    it('With array.', (done) => {
+        let data = evaljson({
+            foo: {
+                bar: 'baz'
+            },
+            quz: [
+                '#{foo.bar}'
+            ]
+        });
+        assert.deepEqual(data, {foo: {bar: 'baz'}, quz: ['baz']});
         done();
     });
 });
