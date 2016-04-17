@@ -3,51 +3,65 @@
  * Runs with mocha.
  */
 
-"use strict";
+'use strict'
 
-const evaljson = require('../lib/evaljson'),
-    assert = require('assert');
+const evaljson = require('../lib/evaljson')
+const assert = require('assert')
 
 describe('evaljson', () => {
-    it('Evaluate json files.', (done) => {
-        let data = evaljson({
-            foo: {
-                'bar': 'quz=#{foo.bar2}',
-                'bar2': "This is bar 2."
-            }
-        });
-        assert.deepEqual(data, {
-            foo: {
-                bar: 'quz=This is bar 2.', bar2: 'This is bar 2.'
-            }
-        });
-        done();
-    });
+  it('Evaluate json files.', (done) => {
+    let data = evaljson({
+      foo: {
+        'bar': 'quz=#{foo.bar2}',
+        'bar2': 'This is bar 2.'
+      }
+    })
+    assert.deepEqual(data, {
+      foo: {
+        bar: 'quz=This is bar 2.', bar2: 'This is bar 2.'
+      }
+    })
+    done()
+  })
 
-    it('Local data.', (done) => {
-        let locale = evaljson({
-            keys: {
-                'NAME': 'My Awesome App'
-            },
-            titles: {
-                'WELCOME_TITLE': "Welcome to #{keys.NAME}!"
-            }
-        });
+  it('Local data.', (done) => {
+    let locale = evaljson({
+      keys: {
+        'NAME': 'My Awesome App'
+      },
+      titles: {
+        'WELCOME_TITLE': 'Welcome to #{keys.NAME}!'
+      }
+    })
 
-        assert.equal(locale.titles['WELCOME_TITLE'], "Welcome to My Awesome App!");
-        done();
-    });
+    assert.equal(locale.titles[ 'WELCOME_TITLE' ], 'Welcome to My Awesome App!')
+    done()
+  })
 
-    it('With array.', (done) => {
-        let data = evaljson({
-            foo: {
-                bar: 'baz'
-            },
-            quz: [
-                '#{foo.bar}'
-            ]
-        });
-        assert.deepEqual(data, {foo: {bar: 'baz'}, quz: ['baz']});
-        done();
-    });
-});
+  it('With array.', (done) => {
+    let data = evaljson({
+      foo: {
+        bar: 'baz'
+      },
+      quz: [
+        '#{foo.bar}'
+      ]
+    })
+    assert.deepEqual(data, { foo: { bar: 'baz' }, quz: [ 'baz' ] })
+    done()
+  })
+
+  it('With func', (done) => {
+    let data = evaljson({
+      bar: '#{addFoo("baz")}'
+    }, {
+      addFoo (val) {
+        return `foo:${val}`
+      }
+    })
+    assert.deepEqual(data, { bar: 'foo:baz' })
+    done()
+  })
+})
+
+/* global describe, it */

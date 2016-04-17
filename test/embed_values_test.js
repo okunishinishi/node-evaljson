@@ -2,24 +2,30 @@
  * Test case for embedValues.
  * Runs with mocha.
  */
-"use strict";
+'use strict'
 
-const embedValues = require('../lib/embed_values.js'),
-    assert = require('assert');
+const embedValues = require('../lib/embed_values.js')
+const assert = require('assert')
 
 describe('embed-values', () => {
+  before((done) => {
+    done()
+  })
 
-    before((done) => {
-        done();
-    });
+  after((done) => {
+    done()
+  })
 
-    after((done) => {
-        done();
-    });
+  it('Embed values', (done) => {
+    let values = embedValues({
+      foo: '#{bar.baz}'
+    }, {
+      'bar.baz': 'hoge'
+    })
 
+    assert.deepEqual(values, { foo: 'hoge' })
+    done()
+  })
+})
 
-    it('Embed values', (done) => {
-        done();
-    });
-});
-
+/* global describe, before, after, it */

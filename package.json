@@ -1,6 +1,6 @@
 {
   "name": "evaljson",
-  "version": "2.0.1",
+  "version": "3.0.1",
   "description": "Eval embedded value in json. Useful to define message resource object.",
   "main": "lib",
   "scripts": {
@@ -22,19 +22,19 @@
   },
   "homepage": "https://github.com/okunishinishi/node-evaljson#readme",
   "dependencies": {
-    "argx": "^1.3.1",
-    "objnest": "^2.0.3"
+    "argx": "^2.0.2",
+    "objnest": "^2.0.4"
   },
   "devDependencies": {
-    "ape-compiling": "^3.3.0",
+    "ape-compiling": "^3.4.0",
     "ape-covering": "^2.0.2",
     "ape-releasing": "^2.0.1",
     "ape-reporting": "^2.0.3",
     "ape-tasking": "^2.0.2",
-    "ape-testing": "^2.0.0",
-    "ape-tmpl": "^2.0.7",
-    "ape-updating": "^2.0.3",
-    "coz": "^4.0.0"
+    "ape-testing": "^2.0.1",
+    "ape-tmpl": "^4.0.4",
+    "ape-updating": "^2.0.4",
+    "coz": "^4.0.4"
   },
   "engines": {
     "node": ">=4.0.0"
