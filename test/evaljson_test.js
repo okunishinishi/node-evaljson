@@ -62,6 +62,17 @@ describe('evaljson', () => {
     assert.deepEqual(data, { bar: 'foo:baz' })
     done()
   })
+
+  it('Eval string', (done) => {
+    let data = evaljson(
+      'This is #{bar}',
+      {
+        bar: '"Yes, bar"'
+      }
+    )
+    assert.equal(data, 'This is "Yes, bar"')
+    done()
+  })
 })
 
 /* global describe, it */
