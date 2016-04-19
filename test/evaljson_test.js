@@ -38,6 +38,24 @@ describe('evaljson', () => {
     done()
   })
 
+  it('With pathname.', (done) => {
+    let data = evaljson({
+      foo: {
+        bar: 'baz'
+      },
+      'some/path': 'hoge',
+      quz: [
+        '#{foo.bar}'
+      ]
+    })
+    assert.deepEqual(data, {
+      foo: { bar: 'baz' },
+      'some/path': 'hoge',
+      quz: [ 'baz' ]
+    })
+    done()
+  })
+
   it('With array.', (done) => {
     let data = evaljson({
       foo: {

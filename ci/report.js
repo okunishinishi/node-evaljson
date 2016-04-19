@@ -6,7 +6,7 @@
 
 'use strict'
 
-process.chdir(__dirname + '/..');
+process.chdir(`${__dirname}/..`)
 
 const apeTasking = require('ape-tasking')
 const apeReporting = require('ape-reporting')
