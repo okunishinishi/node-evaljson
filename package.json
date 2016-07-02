@@ -1,12 +1,12 @@
 {
   "name": "evaljson",
-  "version": "4.0.5",
+  "version": "4.0.7",
   "description": "Eval embedded value in json. Useful to define message resource object.",
   "main": "lib",
-  "browser": "browser",
+  "browser": "sims/browser",
   "scripts": {
     "test": "./ci/test.js",
-    "prepublish": "./ci/build.js"
+    "prepublish": "./ci/build.js && ./ci/browser.js"
   },
   "repository": "okunishinishi/node-evaljson",
   "keyword": [
@@ -25,18 +25,18 @@
   "homepage": "https://github.com/okunishinishi/node-evaljson#readme",
   "dependencies": {
     "argx": "^2.0.2",
-    "objnest": "^3.0.0"
+    "objnest": "^3.0.2"
   },
   "devDependencies": {
-    "ape-compiling": "^4.3.1",
+    "ape-compiling": "^4.3.3",
     "ape-covering": "^3.0.3",
-    "ape-releasing": "^3.1.1",
+    "ape-releasing": "^4.0.1",
     "ape-reporting": "^3.0.1",
-    "ape-tasking": "^4.0.1",
+    "ape-tasking": "^4.0.3",
     "ape-testing": "^4.0.0",
-    "ape-tmpl": "^5.0.5",
-    "ape-updating": "^4.0.1",
-    "coz": "^6.0.2",
+    "ape-tmpl": "^5.0.11",
+    "ape-updating": "^4.0.2",
+    "coz": "^6.0.3",
     "filedel": "^2.0.1"
   },
   "engines": {

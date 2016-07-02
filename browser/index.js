@@ -1,11 +1,11 @@
 /**
  * Eval embedded value in json. Useful to define message resource object.
  * @module evaljson
- * @version 4.0.6
+ * @version 4.0.3
  */
 
-'use strict'
+'use strict';
 
-const evaljson = require('./evaljson')
+var evaljson = require('./evaljson');
 
-module.exports = evaljson
+module.exports = evaljson;
