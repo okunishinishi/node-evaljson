@@ -46,6 +46,64 @@ Eval embedded value in json. Useful to define message resource object.
 <!-- Sections Start -->
 <a name="sections"></a>
 
+<!-- Section from "doc/guides/01.Installation.md.hbs" Start -->
+
+<a name="section-doc-guides-01-installation-md"></a>
+
+Installation
+-----
+
+```bash
+npm install evaljson --save
+```
+
+<!-- Section from "doc/guides/01.Installation.md.hbs" End -->
+
+<!-- Section from "doc/guides/02.Usage.md.hbs" Start -->
+
+<a name="section-doc-guides-02-usage-md"></a>
+
+Usage
+-----
+
+```javascript
+'use strict'
+
+const evaljson = require('evaljson')
+
+let locale = evaljson({
+  keys: {
+    NAME: 'My Awesome App'
+  },
+  titles: {
+    WELCOME_TITLE: 'Welcome to #{keys.NAME}!' // Embed value.
+  }
+  /* ... */
+})
+
+console.log(locale.titles.WELCOME_TITLE) // -> Welcome to My Awesome App!
+
+````
+
+
+<!-- Section from "doc/guides/02.Usage.md.hbs" End -->
+
+<!-- Section from "doc/guides/03.API.md.hbs" Start -->
+
+<a name="section-doc-guides-03-a-p-i-md"></a>
+
+API
+---
+
+| Signature | Description |
+| --------- | ----------- |
+| evaljson(src) | Eval src, with self values as context. |
+| evaljson(src, context) | Eval with self values with context. |
+
+
+
+<!-- Section from "doc/guides/03.API.md.hbs" End -->
+
 
 <!-- Sections Start -->
 

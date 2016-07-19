@@ -1,6 +1,6 @@
 {
   "name": "evaljson",
-  "version": "4.0.8",
+  "version": "4.0.9",
   "description": "Eval embedded value in json. Useful to define message resource object.",
   "main": "lib",
   "browser": "sims/browser",
@@ -28,7 +28,7 @@
     "objnest": "^3.0.5"
   },
   "devDependencies": {
-    "ababel": "^1.0.9",
+    "ababel": "^1.0.13",
     "ababel-es2015": "^1.0.1",
     "ape-covering": "^3.0.3",
     "ape-releasing": "^4.0.2",
