@@ -14,6 +14,6 @@ const ababelEs2015 = require('ababel-es2015')
 apeTasking.runTasks('browser', [
   () => ababelEs2015('**/*.js', {
     cwd: 'lib',
-    out: 'sims/browser'
+    out: 'shim/browser'
   })
 ], true)
