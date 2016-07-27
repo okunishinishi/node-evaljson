@@ -25,7 +25,7 @@
   "homepage": "https://github.com/okunishinishi/node-evaljson#readme",
   "dependencies": {
     "argx": "^2.0.2",
-    "objnest": "^3.0.5"
+    "objnest": "^3.0.6"
   },
   "devDependencies": {
     "ababel": "^1.0.19",
