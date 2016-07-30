@@ -24,13 +24,13 @@
   },
   "homepage": "https://github.com/okunishinishi/node-evaljson#readme",
   "dependencies": {
-    "argx": "^2.0.2",
+    "argx": "^3.0.0",
     "objnest": "^3.0.6"
   },
   "devDependencies": {
-    "ababel": "^1.0.19",
-    "ababel-es2015": "^1.0.2",
-    "amocha": "^1.0.8",
+    "ababel": "^1.0.25",
+    "ababel-es2015": "^1.0.5",
+    "amocha": "^1.0.9",
     "ape-releasing": "^4.0.2",
     "ape-reporting": "^3.0.1",
     "ape-tasking": "^4.0.7",
