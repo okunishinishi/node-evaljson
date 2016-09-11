@@ -1,12 +1,12 @@
 {
   "name": "evaljson",
-  "version": "4.0.12",
+  "version": "4.0.13",
   "description": "Eval embedded value in json. Useful to define message resource object.",
-  "main": "lib",
+  "main": "shim/node",
   "browser": "shim/browser",
   "scripts": {
-    "test": "./ci/test.js",
-    "prepublish": "./ci/build.js && ./ci/browser.js"
+    "test": "node ./ci/test.js",
+    "prepublish": "node ./ci/build.js && node ./ci/shim.js"
   },
   "repository": "okunishinishi/node-evaljson",
   "keyword": [
@@ -36,10 +36,10 @@
     "ape-tasking": "^4.0.7",
     "ape-tmpl": "^5.0.14",
     "ape-updating": "^4.0.4",
-    "coz": "^6.0.14"
+    "coz": "^6.0.20"
   },
   "engines": {
-    "node": ">=6",
-    "npm": ">=3"
+    "node": ">=4",
+    "npm": ">=2"
   }
 }
