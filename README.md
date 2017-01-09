@@ -76,7 +76,9 @@ let locale = evaljson({
     NAME: 'My Awesome App'
   },
   titles: {
-    WELCOME_TITLE: 'Welcome to #{keys.NAME}!' // Embed value.
+    WELCOME_TITLE: 'Welcome to #{keys.NAME}!', // Embed value with "#{some_value}" syntax.
+    WHERE_WE_ARE: 'We are on $(hostname)' // Execute command with "$(command)" syntax
+
   }
   /* ... */
 })
