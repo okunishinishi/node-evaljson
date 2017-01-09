@@ -18,12 +18,14 @@ describe('embed-values', () => {
 
   it('Embed values', (done) => {
     let values = embedValues({
-      foo: '#{bar.baz}'
+      foo: '#{bar.baz}',
+      quz: '$(ls)'
     }, {
       'bar.baz': 'hoge'
     })
 
-    assert.deepEqual(values, { foo: 'hoge' })
+    assert.equal(values.foo, 'hoge')
+    assert.ok(values.quz)
     done()
   })
 })
