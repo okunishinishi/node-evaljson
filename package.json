@@ -6,7 +6,7 @@
   "browser": "shim/browser",
   "scripts": {
     "test": "node ./ci/test.js",
-    "prepublish": "node ./ci/build.js && node ./ci/shim.js"
+    "prepare": "node ./ci/build.js && node ./ci/shim.js"
   },
   "repository": "okunishinishi/node-evaljson",
   "keyword": [
@@ -28,18 +28,17 @@
     "objnest": "^3.0.9"
   },
   "devDependencies": {
-    "ababel": "^1.1.12",
-    "ababel-es2015": "^1.0.8",
-    "amocha": "^1.0.16",
+    "ababel": "^2.0.1",
+    "ababel-es2015": "^2.0.1",
+    "amocha": "^2.0.0",
     "ape-releasing": "^4.0.2",
-    "ape-reporting": "^3.0.1",
     "ape-tasking": "^4.0.9",
     "ape-tmpl": "^5.0.20",
-    "ape-updating": "^4.0.4",
+    "ape-updating": "^4.1.0",
     "coz": "^6.0.20"
   },
   "engines": {
-    "node": ">=4",
-    "npm": ">=2"
+    "node": ">=6",
+    "npm": ">=4"
   }
 }

@@ -5,6 +5,5 @@ install:
 - npm install
 script:
 - ./ci/build.js
+- ./ci/shim.js
 - ./ci/test.js
-- ./ci/cover.js
-- ./ci/report.js
