@@ -91,6 +91,16 @@ describe('evaljson', () => {
     assert.equal(data, 'This is "Yes, bar"')
     done()
   })
+
+  it('Reserved Words.', (done) => {
+    let data = evaljson({
+      if: '#{condition}',
+      condition: true
+    })
+
+    assert(data.if)
+    done()
+  })
 })
 
 /* global describe, it */
