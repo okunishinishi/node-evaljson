@@ -101,6 +101,14 @@ describe('evaljson', () => {
     assert(data.if)
     done()
   })
+
+  it('Global object.', (done) => {
+    let data = evaljson({
+      home: '#{process.env.HOME}'
+    })
+
+    done()
+  })
 })
 
 /* global describe, it */
