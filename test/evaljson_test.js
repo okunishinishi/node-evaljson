@@ -8,6 +8,11 @@
 const evaljson = require('../lib/evaljson')
 const assert = require('assert')
 
+global[ '@@hoge' ] = 'hoge'
+global[ '1234' ] = '1234'
+global[ 'foo-bar' ] = 'foo-bar'
+global[ 'foo bar' ] = 'foo bar'
+
 describe('evaljson', () => {
   it('Evaluate json files.', (done) => {
     let data = evaljson({
