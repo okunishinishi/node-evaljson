@@ -3,7 +3,10 @@
   "version": "4.1.6",
   "description": "Eval embedded value in json. Useful to define message resource object.",
   "main": "shim/node",
-  "browser": "shim/browser",
+  "browser": {
+    "shim/node": "./shim/browser",
+    "child_process": false
+  },
   "scripts": {
     "test": "node ./ci/test.js",
     "prepare": "node ./ci/build.js && node ./ci/shim.js"
