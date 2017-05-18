@@ -1,6 +1,6 @@
 {
   "name": "evaljson",
-  "version": "4.1.7",
+  "version": "4.1.8",
   "description": "Eval embedded value in json. Useful to define message resource object.",
   "main": "shim/node",
   "browser": {
@@ -28,6 +28,7 @@
   "homepage": "https://github.com/okunishinishi/node-evaljson#readme",
   "dependencies": {
     "argx": "^3.0.0",
+    "asobj": "^1.5.0",
     "objnest": "^3.0.9"
   },
   "devDependencies": {
@@ -37,7 +38,7 @@
     "ape-releasing": "^4.0.2",
     "ape-tasking": "^4.0.9",
     "ape-tmpl": "^5.0.20",
-    "ape-updating": "^4.1.0",
+    "ape-updating": "^4.1.1",
     "coz": "^6.0.20"
   },
   "engines": {
