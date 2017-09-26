@@ -5,7 +5,7 @@
 'use strict'
 
 const embedValues = require('../lib/embed_values.js')
-const assert = require('assert')
+const {ok, equal} = require('assert')
 
 describe('embed-values', () => {
   before((done) => {
@@ -24,8 +24,8 @@ describe('embed-values', () => {
       'bar.baz': 'hoge'
     })
 
-    assert.equal(values.foo, 'hoge')
-    assert.ok(values.quz)
+    equal(values.foo, 'hoge')
+    ok(values.quz)
     done()
   })
 
@@ -36,7 +36,7 @@ describe('embed-values', () => {
         [`prop-${i}`]: '#{bar.baz}'
       }), {})
 
-    console.log(embedValues(obj, {bar: {baz: 'hoge'}}))
+    ok(embedValues(obj, {bar: {baz: 'hoge'}}))
   })
 })
 

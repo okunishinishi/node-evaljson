@@ -15,7 +15,7 @@ global['foo bar'] = 'foo bar'
 
 describe('evaljson', () => {
   it('Evaluate json files.', (done) => {
-    let data = evaljson({
+    const data = evaljson({
       foo: {
         'bar': 'quz=#{foo.bar2}',
         'bar2': 'This is bar 2.'
@@ -30,7 +30,7 @@ describe('evaljson', () => {
   })
 
   it('Local data.', (done) => {
-    let locale = evaljson({
+    const locale = evaljson({
       keys: {
         'NAME': 'My Awesome App'
       },
@@ -44,7 +44,7 @@ describe('evaljson', () => {
   })
 
   it('With pathname.', (done) => {
-    let data = evaljson({
+    const data = evaljson({
       foo: {
         bar: 'baz'
       },
@@ -62,7 +62,7 @@ describe('evaljson', () => {
   })
 
   it('With array.', (done) => {
-    let data = evaljson({
+    const data = evaljson({
       foo: {
         bar: 'baz'
       },
@@ -75,7 +75,7 @@ describe('evaljson', () => {
   })
 
   it('With func', (done) => {
-    let data = evaljson({
+    const data = evaljson({
       bar: '#{addFoo("baz")}'
     }, {
       addFoo (val) {
@@ -87,7 +87,7 @@ describe('evaljson', () => {
   })
 
   it('Eval string', (done) => {
-    let data = evaljson(
+    const data = evaljson(
       'This is #{bar}',
       {
         bar: '"Yes, bar"'
@@ -98,7 +98,7 @@ describe('evaljson', () => {
   })
 
   it('Reserved Words.', (done) => {
-    let data = evaljson({
+    const data = evaljson({
       if: '#{condition}',
       condition: true
     })
@@ -108,7 +108,7 @@ describe('evaljson', () => {
   })
 
   it('Global object.', (done) => {
-    let data = evaljson({
+    const data = evaljson({
       home: '#{process.env.HOME}'
     })
 
