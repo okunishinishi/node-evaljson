@@ -36,7 +36,9 @@ describe('embed-values', () => {
         [`prop-${i}`]: '#{bar.baz}'
       }), {})
 
+    console.time('large')
     ok(embedValues(obj, {bar: {baz: 'hoge'}}))
+    console.timeEnd('large')
   })
 })
 
