@@ -1,6 +1,6 @@
 {
   "name": "evaljson",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "description": "Eval embedded value in json. Useful to define message resource object.",
   "main": "lib",
   "browser": {
