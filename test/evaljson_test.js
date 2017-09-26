@@ -8,10 +8,10 @@
 const evaljson = require('../lib/evaljson')
 const assert = require('assert')
 
-global[ '@@hoge' ] = 'hoge'
-global[ '1234' ] = '1234'
-global[ 'foo-bar' ] = 'foo-bar'
-global[ 'foo bar' ] = 'foo bar'
+global['@@hoge'] = 'hoge'
+global['1234'] = '1234'
+global['foo-bar'] = 'foo-bar'
+global['foo bar'] = 'foo bar'
 
 describe('evaljson', () => {
   it('Evaluate json files.', (done) => {
@@ -39,7 +39,7 @@ describe('evaljson', () => {
       }
     })
 
-    assert.equal(locale.titles[ 'WELCOME_TITLE' ], 'Welcome to My Awesome App!')
+    assert.equal(locale.titles['WELCOME_TITLE'], 'Welcome to My Awesome App!')
     done()
   })
 
@@ -54,9 +54,9 @@ describe('evaljson', () => {
       ]
     })
     assert.deepEqual(data, {
-      foo: { bar: 'baz' },
+      foo: {bar: 'baz'},
       'some/path': 'hoge',
-      quz: [ 'baz' ]
+      quz: ['baz']
     })
     done()
   })
@@ -70,7 +70,7 @@ describe('evaljson', () => {
         '#{foo.bar}'
       ]
     })
-    assert.deepEqual(data, { foo: { bar: 'baz' }, quz: [ 'baz' ] })
+    assert.deepEqual(data, {foo: {bar: 'baz'}, quz: ['baz']})
     done()
   })
 
@@ -82,7 +82,7 @@ describe('evaljson', () => {
         return `foo:${val}`
       }
     })
-    assert.deepEqual(data, { bar: 'foo:baz' })
+    assert.deepEqual(data, {bar: 'foo:baz'})
     done()
   })
 
@@ -113,6 +113,17 @@ describe('evaljson', () => {
     })
 
     done()
+  })
+
+  // https://github.com/okunishinishi/node-evaljson/issues/4
+  it('Too large json', () => {
+    const largeSrc = new Array(1000)
+      .fill(null)
+      .map((_, i) => ({[`key${i}`]: 'foo'}))
+      .reduce((obj, h) => Object.assign(obj, h), {})
+    console.time('1')
+    const vars = evaljson(largeSrc)
+    console.timeEnd('1')
   })
 })
 

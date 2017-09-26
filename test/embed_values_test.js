@@ -28,6 +28,16 @@ describe('embed-values', () => {
     assert.ok(values.quz)
     done()
   })
+
+  it('Handle large object', () => {
+    const obj = new Array(10000)
+      .fill(null)
+      .reduce((reduced, v, i) => Object.assign(reduced, {
+        [`prop-${i}`]: '#{bar.baz}'
+      }), {})
+
+    console.log(embedValues(obj, {bar: {baz: 'hoge'}}))
+  })
 })
 
 /* global describe, before, after, it */

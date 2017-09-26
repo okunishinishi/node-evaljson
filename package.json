@@ -34,10 +34,10 @@
   "devDependencies": {
     "ababel": "^2.0.1",
     "ababel-es2015": "^2.0.1",
-    "amocha": "^2.0.0",
+    "amocha": "^3.0.0",
     "ape-releasing": "^4.0.2",
     "ape-tasking": "^4.0.9",
-    "ape-tmpl": "^6.0.0",
+    "ape-tmpl": "^6.0.1",
     "ape-updating": "^4.1.1",
     "coz": "^6.0.20"
   },
