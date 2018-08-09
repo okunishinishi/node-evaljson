@@ -1,10 +1,10 @@
 {
   "name": "evaljson",
-  "version": "5.1.1",
+  "version": "6.0.1",
   "description": "Eval embedded value in json. Useful to define message resource object.",
   "main": "lib",
   "browser": {
-    "lib": "./shim/browser",
+    "evaljson": "./shim/browser",
     "child_process": false
   },
   "scripts": {
@@ -28,21 +28,20 @@
   "homepage": "https://github.com/okunishinishi/node-evaljson#readme",
   "dependencies": {
     "argx": "^3.0.0",
-    "asobj": "^2.0.1",
-    "objnest": "^4.0.0"
+    "asobj": "^3.0.0",
+    "objnest": "^4.1.4"
   },
   "devDependencies": {
-    "ababel": "^2.0.1",
-    "ababel-es2015": "^2.0.1",
-    "amocha": "^3.0.0",
+    "ababel": "^5.0.1",
+    "amocha": "^5.0.0",
     "ape-releasing": "^4.0.2",
     "ape-tasking": "^4.0.9",
-    "ape-tmpl": "^6.0.2",
-    "ape-updating": "^4.1.1",
-    "coz": "^6.0.20"
+    "ape-tmpl": "^6.0.10",
+    "ape-updating": "^5.0.1",
+    "coz": "^7.0.2"
   },
   "engines": {
-    "node": ">=7.6",
-    "npm": ">=4"
+    "node": ">=8",
+    "npm": ">=5"
   }
 }
