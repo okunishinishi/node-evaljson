@@ -1,10 +1,10 @@
 {
   "name": "evaljson",
-  "version": "6.0.2",
+  "version": "6.0.3",
   "description": "Eval embedded value in json. Useful to define message resource object.",
   "main": "lib",
   "browser": {
-    "evaljson": "./shim/browser",
+    ".": "./shim/browser",
     "child_process": false
   },
   "scripts": {
@@ -29,7 +29,7 @@
   "dependencies": {
     "argx": "^3.0.0",
     "asobj": "^3.0.0",
-    "objnest": "^5.0.0"
+    "objnest": "^5.0.3"
   },
   "devDependencies": {
     "ababel": "^5.0.3",
