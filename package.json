@@ -1,6 +1,6 @@
 {
   "name": "evaljson",
-  "version": "6.0.3",
+  "version": "6.0.4",
   "description": "Eval embedded value in json. Useful to define message resource object.",
   "main": "lib",
   "browser": {
@@ -29,14 +29,14 @@
   "dependencies": {
     "argx": "^3.0.0",
     "asobj": "^3.0.0",
-    "objnest": "^5.0.3"
+    "objnest": "^5.0.4"
   },
   "devDependencies": {
-    "ababel": "^5.0.3",
+    "ababel": "^5.0.6",
     "amocha": "^5.0.0",
-    "ape-releasing": "^4.0.2",
+    "ape-releasing": "^5.0.0",
     "ape-tasking": "^4.0.9",
-    "ape-tmpl": "^6.0.10",
+    "ape-tmpl": "^6.0.11",
     "ape-updating": "^5.0.1",
     "coz": "^7.0.2"
   },
